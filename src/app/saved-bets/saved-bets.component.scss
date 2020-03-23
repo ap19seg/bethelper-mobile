@@ -1,0 +1,88 @@
+@import "../theme.scss";
+
+// Page-specific SCSS-Variables
+$bet-declarator-color: $color3;
+
+ActionBar {
+  color: $actionbar-text-color;
+  background-color: $actionbar-background-color;
+}
+
+#saved-bets-stack-layout {
+    background-color: $stack-layout-background;
+    padding-top: 5;
+}
+
+.bet-stack-layout{
+  background-color: $stake-layout-background;
+  border-radius:5;
+  margin: 3 5 2 5;
+  color: white;
+}
+
+.bet-header-layout{
+//   background-color: red;
+//   border-width: 1;
+  width: 67%;
+//   width: 100%;
+}
+
+.bet-name{
+    padding: 0;
+    font-size: 22em;
+    margin-bottom: 10;
+}
+
+$bet-details-font-size: 14em;
+
+.bet-details-wrap-layout{
+    padding: 0;
+    font-size: $bet-details-font-size;
+}
+
+.bet-details-stack-layout{
+    padding: 0;
+    margin-right: 10%;
+    font-size: $bet-details-font-size;
+}
+
+.bet-info-label{
+    padding: 0;
+    font-size: $bet-details-font-size;
+    font-weight: bold;
+    color: $bet-declarator-color;
+}
+
+.bet-info-splitter{
+    padding: 0;
+    font-size: $bet-details-font-size;
+    color: $bet-declarator-color;
+    font-weight: bold;
+    margin-right: 2%;
+}
+
+.bet-info-text{
+    padding: 0;
+    padding: 0;
+    font-size: 13em;
+}
+
+.icons-layout{
+    // background-color: rgb(18, 20, 18);
+    width: 33%;
+//   border-width: 1;
+  padding: 0;
+}
+
+.bet-icon{
+    margin:0;
+    font-size: 24em;
+    // border-color: blue;
+    // border-width: 1;
+    width: 45%;
+    text-align: center;
+}
+
+.edit-icon{
+    margin-right: 5%;
+}

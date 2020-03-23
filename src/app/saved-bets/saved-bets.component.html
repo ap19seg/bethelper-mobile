@@ -1,0 +1,35 @@
+<ActionBar title="{{ 'savedbets_actionbar' | L }}">
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" [nsRouterLink]="['/mainscreen']" >
+    </NavigationButton>
+</ActionBar>
+
+<ScrollView id="scroll-view" height="100%">
+    <StackLayout id="saved-bets-stack-layout">
+        <RadListView [items]="this.saveBetsService.bets" id="saved-bets-list-view">
+            <ng-template let-bet="item" class="bet-template">
+                <StackLayout orientation="horizontal" class="bet-stack-layout">
+                    <!-- <DockLayout> -->
+                    <StackLayout class="bet-header-layout" orientation="vertical">
+                        <Label class="bet-name" [text]="bet.name"></Label>
+                        <WrapLayout class="bet-details-wrap-layout">
+                            <StackLayout orientation="horizontal" class="bet-details-stack-layout">
+                                <Label class="bet-info-label" text="{{ 'savedbets_date_label' | L }}"></Label>
+                                <Label class="bet-info-splitter" text=":"></Label>
+                                <Label class="bet-info-text" [text]="getDate(bet)"></Label>
+                            </StackLayout>
+                            <StackLayout orientation="horizontal" class="bet-details-stack-layout">
+                                <Label class="bet-info-label" text="{{ 'savedbets_bet_count_label' | L }}"></Label>
+                                <Label class="bet-info-splitter" text=":"></Label>
+                                <Label class="bet-info-text" [text]="bet.tips.length"></Label>
+                            </StackLayout>
+                        </WrapLayout>
+                    </StackLayout>
+                    <StackLayout orientation="horizontal" class="icons-layout">
+                        <Label text="&#xf07c;" class="fas bet-icon edit-icon" (touch)="onIconTouch($event)" (tap)="onOpenIconTap(bet)" [nsRouterLink]="['/mainscreen']" ></Label>
+                        <Label text="&#xf2ed;" class="fas bet-icon" (touch)="onIconTouch($event)" (tap)="onTrashIconTap(bet)"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+    </StackLayout>
+</ScrollView>

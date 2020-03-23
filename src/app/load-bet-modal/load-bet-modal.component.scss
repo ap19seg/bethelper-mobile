@@ -1,0 +1,47 @@
+@import "../theme.scss";
+
+#load-bet-dialog-wrapper {
+  background-color: $color2;
+  padding-left: 15%;
+  padding-right: 15%;
+  height: 100%;
+}
+
+#load-bet-header-label {
+    font-size: 21em;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    color: white;
+    font-weight: bold;
+}
+
+#load-bet-text-label {
+    font-size: 16em;
+    width: 100%;
+    color: white;
+    margin-bottom: 2%;
+}
+
+#load-bet-buttons-layout {
+    width: 100%;
+    padding: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+}
+
+#load-bet-no-button {
+  background-color: $color4;
+  color: white;
+  margin-right: 1%;
+  margin-left: 0%;
+  width: 49%;
+}
+
+#load-bet-yes-button {
+  color: black;
+  background-color: $color3;
+  margin-left: 1%;
+  margin-right: 0%;
+  width: 49%;
+}

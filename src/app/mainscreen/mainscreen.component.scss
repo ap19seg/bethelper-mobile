@@ -1,0 +1,339 @@
+@import "../theme.scss";
+
+ActionBar {
+  color: $actionbar-text-color;
+  background-color: $actionbar-background-color;
+}
+
+.action-item-label{
+  background-color: $actionbar-background-color;
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 38;
+  width: 45;
+  text-align:center;
+  color: $actionbar-text-color;
+}
+
+.action-item-save{
+  font-size: 25em;
+  margin-right: 5%;
+}
+
+.action-item-profile{
+  font-size: 25em;
+}
+
+#winnings-sticky-footer {
+  background-color: $winnings-sticky-footer-background;
+  padding-top: 0;
+  font-size: 16em;
+  padding-bottom: 5;
+  border-top-width: 0 !important;
+}
+
+#stake-layout {
+  width: 100%;
+  padding-top: 10;
+  padding-bottom: 15;
+  background-color: $stake-layout-background;
+}
+
+#tips-stack-layout {
+  background-color: $stack-layout-background;
+  border-color: rgb(0, 130, 0) !important;
+}
+
+#winnings-layout {
+  margin-top: 0.4%;
+  margin-bottom: 0.4%;
+}
+
+#winnings-title {
+  font-size: 20em;
+  font-weight: bold;
+  background-color: $winnings-title-background-color;
+  color: $winnings-title-color;
+  padding-top: 10%;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10%;
+  // margin-bottom: 1%;
+}
+
+.winnings-label-container {
+  color: $winnings-label-color;
+  width: 28%;
+  margin-right: 0.5%;
+}
+
+.winnings-splitter {
+  color: rgb(231, 169, 47);
+  margin-right: 0%;
+}
+
+.winnings-result {
+  color: $winnings-result-color;
+  width: 19%;
+}
+
+
+.stake-label {
+  color: $stake-text-color;
+  font-size: 20em !important;
+  padding-top: 10%;
+  margin-right: 2%;
+}
+
+.coins-icon {
+  color: $coins-color;
+  font-size: 22em;
+  margin-top: 10;
+  margin-bottom: 0;
+  margin-right: 0%;
+}
+
+.save-icon {
+  color: rgb(231, 169, 47);
+  text-align: right;
+  font-size: 28em;
+  margin-top: 5;
+  margin-bottom: 0;
+  margin-right: 5%;
+  text-align: right;
+}
+
+.stake-input {
+  border-color: rgb(100, 100, 100);
+  border-bottom-width: 2;
+  placeholder-color: $stake-input-placeholder-color;
+  placeholder-font-size: 12em;
+  color: white;
+  width: 20%;
+  border: 1;
+  font-size: 18em;
+  margin-bottom: 2;
+  margin-top: 0;
+  /* margin-left: 2%; */
+  /* margin-right: ; */
+}
+
+#dollar-icon {
+  color: rgb(231, 169, 47);
+  font-size: 20em;
+  margin-top: 1%;
+  text-align: right;
+}
+
+.mt-5 {
+  margin-top: 5;
+}
+
+.combination-bet-layout {
+  margin-left: 3%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+#tip-template {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.h-0 {
+  height: 0;
+}
+
+.win-marker {
+  border-color: $success !important;
+}
+
+.loss-marker {
+  border-color: $error !important;
+}
+
+.tip-grid-layout {
+  background-color: $tip-background-color;
+  color: red;
+  border-width: 4 4 4 4;
+  border-radius: 5 5 5 5;
+  margin-right: 6em;
+  margin-left: 6em;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 6%;
+  font-size: 16em;
+}
+
+.mp-0 {
+  margin: 0;
+  padding: 0;
+}
+
+.tip-header {
+  font-weight: bold;
+  margin-bottom: 4;
+  font-size: 17em !important;
+  /* color: rgb(231, 169, 47); */
+  color: $tip-header-color;
+}
+
+.tip-left-margin {
+  margin-left: 2% !important;
+}
+
+.tip-detail {
+  padding-top: 2%;
+  font-size: 14em !important;
+  font-weight: bold;
+  color: $tip-text-color;
+}
+
+.bin-icon {
+  font-size: 20em;
+  color: whitesmoke;
+}
+
+.configure-icon {
+  font-size: 22em;
+  margin-right: 10%;
+  color: whitesmoke;
+}
+
+.tip-configuration-stack-layout {
+  margin: 0%;
+  padding: 0%;
+  text-align: right;
+}
+
+.tip-label {
+  font-weight: bold;
+  color: $tip-accent-color;
+  padding-right: 5 !important;
+}
+
+.tip-meta {
+  font-size: 11em;
+  color: $tip-text-color;
+  font-weight: bold;
+  padding-top: 0;
+  margin-left: 2.6%;
+  margin-top: 5;
+}
+
+.opponents-empty-splitter{
+  margin-left: 0 !important;
+}
+
+#dock-bottom-layout {
+  background-color: transparent;
+}
+
+.tip-opponent {
+  color: $tip-text-color;
+}
+
+.ml-2 {
+  margin-left: 2%;
+}
+
+.ml-3 {
+  margin-left: 2.2%;
+}
+
+.opponent-splitter {
+  margin: 0;
+  padding: 0;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.add-button-wrapper {
+  margin-top: 10;
+  width: 72;
+  height: 72;
+}
+
+.add-button-shadow {
+  width: 53;
+  height: 53;
+}
+
+.add-button {
+  background-color: $add-button-background-color;
+  border-radius: 28;
+  width: 53;
+  height: 53;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.add-button-text {
+  color: $add-button-text-color;
+  font-size: 30;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes add-button-down {
+  from {
+    background-color: $color1 !important;
+  }
+  to {
+    background-color: $color2 !important;
+  }
+}
+
+.add-button.add-button-down {
+  animation-name: add-button-down;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+#add-label {
+  font-size: 20em;
+  padding-top: 4%;
+}
+
+
+.win-loss-switch {
+  off-background-color: $error;
+  background-color: $success;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dialogOpen .content {
+  opacity: 0.2;
+}
+.dialogOpen .dialog-wrapper {
+  visibility: visible;
+  animation-name: show;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+}
+.dialog-wrapper {
+  visibility: collapse;
+  opacity: 0;
+}
+.dialog {
+  border-width: 1 0 1 0;
+  border-color: black;
+  width: 100%;
+  margin-top: 100;
+}

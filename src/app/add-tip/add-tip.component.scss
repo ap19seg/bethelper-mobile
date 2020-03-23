@@ -1,0 +1,174 @@
+@import "../theme.scss";
+
+$add-tip-layout-background-color:$color1;
+$dialog-button-color: white;
+$dialog-button-border-color: $color2;
+$dialog-button-background-color: $color2;
+$tip-input-field-color: white;
+$tip-input-field-border-color: $color4;
+$tip-detail-label-color: white;
+$tip-detail-icon-color: $color3;
+$tip-input-field-placeholder-color: gray;
+$opponent-input-error-color: $error;
+$vs-label-color: white;
+$cancel-button-background-color: $color4;
+$cancel-button-color: white;
+$add-tip-button-background-color: $color3;
+$add-tip-button-color: black;
+
+
+RadAutoCompleteTextView.fighter-names-autocomplete{
+  background-color: transparent;
+  border-color: $color4;
+  color: white;
+  font-size: 18em;
+  font-weight: bold;
+  border-bottom-width: 3;
+  padding-left: 5;
+}
+
+RadAutoCompleteTextView.fighter-names-autocomplete.input-error{
+  border-color: $error !important;
+}
+
+RadAutoCompleteTextView.fighter-names-autocomplete SuggestionView{
+  background-color: $color2;
+  color: white;
+  font-size: 16em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ActionBar {
+  color: $actionbar-text-color;
+  background-color: $actionbar-background-color;
+}
+
+.opponent-splitter {
+  font-weight: bold;
+  font-size: 18;
+  margin-top: 15%;
+}
+
+
+#add-tip-layout {
+  background-color: $add-tip-layout-background-color;
+}
+
+.dialog-button {
+  color: $dialog-button-color;
+  background-color: $dialog-button-background-color;
+  font-size: 14em;
+  height: 7%;
+  border-color: $dialog-button-border-color;
+  border-width: 2;
+  border-radius: 2;
+}
+
+.tip-input-field {
+  color: $tip-input-field-color;
+  text-decoration: none !important;
+  text-decoration-line: none;
+  font-weight: bold;
+  vertical-align: top;
+  text-align: left;
+  border-color: $tip-input-field-border-color;
+  border-bottom-width: 3;
+  placeholder-color: $tip-input-field-placeholder-color;
+  font-size: 18em;
+  padding: 0;
+  margin-top: 10;
+  margin-bottom: 0;
+  padding:0;
+  padding-left: 5;
+}
+
+.odds-input-field{
+  margin-top: 13 !important;
+}
+
+.tip-detail-label {
+  margin-left: 3.5%;
+  margin-top: 2.2%;
+  font-weight: bold;
+  font-size: 19em;
+  color: $tip-detail-label-color;
+}
+
+.tip-detail-layout{
+  margin-top: 20;
+}
+
+.tip-detail-with-dialog{
+  margin-top: 25;
+  margin-bottom: 1.5%;
+}
+
+.date-layout{
+  margin-top: 18 !important;
+}
+
+.tip-detail-icon{
+  font-weight: bold;
+  font-size: 21;
+  margin-top: 2.5%;
+  margin-left: 2%;
+  color: $tip-detail-icon-color;
+}
+
+.opponent-input-error{
+  color: $opponent-input-error-color;
+  font-size: 16em;
+  margin-left: 5%;
+}
+
+.input-error{
+  border-color: $opponent-input-error-color !important;
+}
+
+.tip-detail-text-field {
+  placeholder-color: tip-detail-text-field-placeholder-color;
+  placeholder-font-weight: bold;
+}
+
+.detail-layout-margin{
+  margin-bottom: 5 !important;
+}
+
+#vs-label {
+  width: 100%;
+  color: $vs-label-color;
+  font-size: 18em;
+  font-weight: bold;
+  margin-top: 20;
+  margin-bottom: 0;
+}
+
+#vs-layout {
+  text-align: center;
+}
+
+#cancel-button {
+  background-color: $cancel-button-background-color;
+  color: $cancel-button-color;
+  margin-right: 1%;
+}
+
+#add-tip-button {
+  background-color: $add-tip-button-background-color;
+  color: $add-tip-button-color;
+  margin-left: 1%;
+}
+
+#button-layout {
+  margin-top: 4%;
+}
+
+.button-stack-layout {
+  margin: 0;
+  padding: 0;
+  width:50%;
+}

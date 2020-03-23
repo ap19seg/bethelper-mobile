@@ -1,0 +1,43 @@
+<StackLayout id="bethelper-outcomepicker-layout">
+    <ScrollView id="outcome-scrollview">
+        <StackLayout id="outcome-stacklayout" >
+
+            <!-- Draw -->
+            <Label text="{{ 'outcome_draw' | L }}" class="outcome-label" id="draw-label"></Label>
+            <Button [text]="this.tipService.drawOutcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true"></Button>
+
+            <!-- Opponent 1 by -->
+            <Label text="{{ 'outcomepicker_opponent1_wins_label' | L }}" class="outcome-label" ></Label>
+            <StackLayout *ngFor="let outcome of this.tipService.opponentOneWinsByOutcomes">
+                <Button [text]="outcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true"></Button>
+            </StackLayout>
+
+            <!-- Opponent 1 in round -->
+            <Label text="{{ 'outcomepicker_opponent1_wins_in_round_label' | L }}" class="outcome-label"></Label>
+            <StackLayout *ngFor="let outcome of this.tipService.opponentOneWinsInRoundOutcomes">
+                <Button [text]="outcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true"></Button>
+            </StackLayout>
+
+            <!-- Opponent 2 by -->
+            <Label text="{{ 'outcomepicker_opponent2_wins_label' | L }}" class="outcome-label"></Label>
+            <StackLayout *ngFor="let outcome of this.tipService.opponentTwoWinsByOutcomes">
+                <Button [text]="outcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true"></Button>
+            </StackLayout>
+
+            <!-- Opponent 2 in round -->
+            <Label text="{{ 'outcomepicker_opponent2_wins_in_round_label' | L }}" class="outcome-label"></Label>
+            <StackLayout *ngFor="let outcome of this.tipService.opponentTwoWinsInRoundOutcomes">
+                <Button [text]="outcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true"></Button>
+            </StackLayout>
+
+            <!-- Fight length -->
+            <Label text="{{ 'outcomepicker_fight_length_label' | L }}" class="outcome-label"></Label>
+            <StackLayout *ngFor="let outcome of this.tipService.fightLengthOutcomes">
+                <Button [text]="outcome" class="outcome-button" (tap)="setOutcome($event)" textWrap="true" ></Button>
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ScrollView>
+</StackLayout>

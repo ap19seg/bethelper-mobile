@@ -1,0 +1,75 @@
+{
+  "app.name": "Bethelper",
+  "ios.info.plist": {
+    "NSLocationWhenInUseUsageDescription": "Bethelper App"
+  },
+
+
+  "mainscreen_stake_label":"Stake",
+  "mainscreen_odds_label":"Odds:",
+  "mainscreen_outcome_label":"Outcome:",
+  "mainscreen_add_tip_button_label":"Add bet",
+  "mainscreen_winnings_title":"Winnings",
+
+  "add_tip_title":"Add bet",
+  "add_tip_opponents_label":"Opponents",
+  "add_tip_odds_label":"Odds",
+  "add_tip_outcome_label":"Outcome",
+  "add_tip_date_label":"Date",
+  "add_tip_cancel_label":"Cancel",
+  "add_tip_add_tip_label":"Add bet",
+  "add_tip_opponent_input_error_label":"Please insert the opponents in order to choose the outcome",
+
+  "datepicker_ok":"OK",
+  "datepicker_cancel":"CANCEL",
+
+  "outcomepicker_opponent1_wins_label":"Opponent 1 wins",
+  "outcomepicker_opponent1_wins_in_round_label":"Opponent 1 wins in round",
+  "outcomepicker_opponent2_wins_label":"Opponent 2 wins",
+  "outcomepicker_opponent2_wins_in_round_label":"Opponent 2 wins in round",
+  "outcomepicker_fight_length_label":"Fight length",
+  "outcomepicker_default_value":"Tap to select outcome...",
+
+  "savebet_title":"Save bet",
+  "savebet_input_hint":"Insert name",
+  "savebet_cancel_label":"CANCEL",
+  "savebet_ok_label":"OK",
+  "savebet_success_message":"Bet saved successfully. Click on the profile icon to open and delete it.",
+  "savebet_input_empty_error_message":"Please insert the name of the bet",
+  "savebet_no_bets_error_message":"Please add a bet before saving",
+  "savebet_name_already_exists_error_message":"The name already exists",
+
+  "savedbets_actionbar":"My bets",
+  "savedbets_date_label":"Created",
+  "savedbets_bet_count_label":"Bets",
+
+  "load_bet_title_label":"Load bet",
+  "load_bet_text_label":"Do you want to load the bet you've last edited?",
+  "load_bet_yes_label":"Yes",
+  "load_bet_no_label":"No",
+
+  "combinationbet_single_name":"Single",
+  "combinationbet_combination_name":"Combination",
+
+  "outcome_draw":"Draw",
+  "outcome_win":"wins",
+  "outcome_win_by_knockout_or_disqualification":"wins by KO/TKO or diqualification",
+  "outcome_win_by_decision":"wins by decision",
+  "outcome_win_by_submission":"wins by submission",
+  "outcome_win_in_round1":"wins in round 1",
+  "outcome_win_in_round2":"wins in round 2",
+  "outcome_win_in_round3":"wins in round 3",
+  "outcome_win_in_round4":"wins in round 4",
+  "outcome_win_in_round5":"wins in round 5",
+  "outcome_fight_lasts_more_than_1_and_half_rounds":"The fight lasts longer than 1,5 rounds",
+  "outcome_fight_lasts_more_than_2_and_half_rounds":"The fight lasts longer than 2,5 rounds",
+  "outcome_fight_lasts_more_than_3_and_half_rounds":"The fight lasts longer than 3,5 rounds",
+  "outcome_fight_lasts_more_than_4_and_half_rounds":"The fight lasts longer than 4,5 rounds",
+  "outcome_fight_lasts_5_rounds":"The fight lasts 5 rounds",
+  "outcome_fight_lasts_less_than_1_and_half_rounds":"The fight lasts less than 1,5 rounds",
+  "outcome_fight_lasts_less_than_2_and_half_rounds":"The fight lasts less than 2,5 rounds",
+  "outcome_fight_lasts_less_than_3_and_half_rounds":"The fight lasts less than 3,5 rounds",
+  "outcome_fight_lasts_less_than_4_and_half_rounds":"The fight lasts less than 4,5 rounds",
+  "outcome_fight_lasts_less_than_5_rounds":"The fight lasts less than 5 rounds"
+}
+

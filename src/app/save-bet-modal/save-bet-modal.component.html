@@ -1,0 +1,31 @@
+<StackLayout id="save-bet-stack-layout">
+    <StackLayout id="save-bet-header-stack-layout">
+        <Label id="save-bet-header-label" text="{{ 'savebet_title' | L }}"></Label>
+    </StackLayout>
+    <TextField class="bet-name-input {{ showInputEmptyError? 'input-error':''}}" hint="{{ 'savebet_input_hint' | L }}"
+        inputType="text" verticalAlignment="top" textAlignment="center" [(ngModel)]="betName"
+        (textChange)="betNameInputTextChange()">
+    </TextField>
+    <Label text="{{ 'savebet_input_empty_error_message' | L }}" textWrap="true"
+        visibility="{{ showInputEmptyError ? 'visible' : 'collapsed' }}" class="save-bet-error-message" ></Label>
+    <Label text="{{ 'savebet_no_bets_error_message' | L }}" textWrap="true"
+        visibility="{{ showNoBetsError ? 'visible' : 'collapsed' }}" class="save-bet-error-message"></Label>
+    <Label text="{{ 'savebet_name_already_exists_error_message' | L }}" textWrap="true"
+        visibility="{{ showBetNameAlreadyExistsError ? 'visible' : 'collapsed' }}" class="save-bet-error-message"></Label>
+    <StackLayout orientation="horizontal" id="success-message-layout"
+        visibility="{{ showSuccessMessage ? 'visible' : 'collapsed' }}">
+        <Label text="&#xf058;" class="fas check-icon" horizontalAlignment="right"></Label>
+        <Label text="{{ 'savebet_success_message' | L }}" textWrap="true" class="success-message"></Label>
+    </StackLayout>
+    <StackLayout orientation="horizontal" class="buttons-layout">
+        <StackLayout orientation="horizontal" horizontalAlignment="right" id="action-buttons-layout">
+            <Label id="cancel-button" text="{{ 'savebet_cancel_label' | L }}" (tap)="cancelButtonTap()"></Label>
+            <Label id="save-button" text="{{ 'savebet_ok_label' | L }}" (tap)="saveButtonTap($event)"></Label>
+        </StackLayout>
+        <StackLayout verticalAlignment="top" id="activity-layout"
+            visibility="{{ showActivityIndicator ? 'visible' : 'collapsed' }}">
+            <ActivityIndicator busy="true" id="activity-indicator"></ActivityIndicator>
+        </StackLayout>
+    </StackLayout>
+
+</StackLayout>

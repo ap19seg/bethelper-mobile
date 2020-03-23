@@ -1,0 +1,47 @@
+$color1: #1d1e22;
+$color2: #393f4d;
+$color3: #feda6a;
+$color4: #7f7f85;
+$color5: #45A29E;
+$color6: rgb(204, 205, 207);
+$color7: rgb(35,35,35);
+$success:rgb(0, 170, 120);
+$error:rgb(140, 0, 70);
+$placeholder-gray: rgb(200,200,200);
+$cancel-button-color: $placeholder-gray;
+
+
+$actionbar-background-color: $color2;
+$actionbar-text-color: white;
+
+$stake-layout-background: $color1;
+$stake-text-color:white;
+$coins-color:$color3;
+
+$winnings-sticky-footer-background: $color2;
+$winnings-title-color:white;
+$winnings-title-background-color:$color2;
+$winnings-label-color:$color3;
+$winnings-result-color:white;
+
+
+
+$stack-layout-background: $color4;
+$tip-header-color: white;
+$tip-text-color: rgb(255, 255, 255);
+$tip-accent-color: $color3;
+$tip-background-color: $color1;
+
+$add-button-background-color: $color1;
+$add-button-text-color: white;
+
+
+$stake-input-placeholder-color: red;
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+  }
+
+  .far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+  }

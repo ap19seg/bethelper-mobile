@@ -1,0 +1,37 @@
+@import "../theme.scss";
+
+#bethelper-outcomepicker-layout {
+  background-color: $color2;
+  width: 350;
+}
+
+#outcome-header {
+  color: $color3;
+  font-size: 20em;
+  margin-left: 2%;
+}
+
+#outcome-scrollview {
+    margin: 4%;
+    margin-top: 2%;
+}
+
+#draw-label{
+    padding-top: 5% !important;
+}
+
+.outcome-label {
+    color: $color3;
+    font-size: 18em;
+    margin-left: 2%;
+    padding-top: 11%;
+    padding-bottom: 7%;
+
+}
+.outcome-button {
+    margin: 0;
+    color: white;
+    background-color: $color1;
+    padding-left: 10;
+    padding-right: 10;
+}

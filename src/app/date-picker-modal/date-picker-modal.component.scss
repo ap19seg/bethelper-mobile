@@ -1,0 +1,27 @@
+@import "../theme.scss";
+
+#bethelper-datepicker-layout {
+  background-color: $color2;
+}
+
+#bethelper-datepicker {
+    margin-right: 17%;
+    margin-left: 17%;
+    margin-top: 2%;
+}
+
+#bethelper-datepicker-buttons-layout{
+    margin-bottom: 4%;
+    font-size: 16em;
+}
+
+#cancel-date-picker-button {
+  color: $cancel-button-color;
+  margin-right: 0;
+}
+
+#apply-date-button {
+  color: $color3;
+  margin-left: 8%;
+  margin-right:11%;
+}

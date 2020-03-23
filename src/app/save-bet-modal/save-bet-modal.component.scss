@@ -1,0 +1,124 @@
+@import "../theme.scss";
+
+$save-bet-stack-layout-color:$color2;
+$bet-name-input-border-color:white;
+$bet-name-input-placeholder-color:$placeholder-gray;
+$bet-name-input-color:white;
+$save-button-color:$color3;
+$activity-indicator-color:white;
+$success-message-layout-color:$success;
+$save-bet-error-message-color:$error;
+$save-bet-header-label-color:$color3;
+
+
+#save-bet-stack-layout {
+  background-color: $save-bet-stack-layout-color;
+  width: 300;
+  padding-top: 5;
+  padding-left: 5;
+  padding-right: 5;
+  padding-bottom: 0;
+}
+
+.bet-name-input {
+  border-color: $bet-name-input-border-color;
+  placeholder-color: $bet-name-input-placeholder-color;
+  font-size: 18em;
+  color: $bet-name-input-color;
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-right: 5;
+  padding-left: 5;
+}
+
+#action-buttons-layout {
+  font-size: 16em;
+  width: 85%;
+}
+
+.buttons-layout{
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+#cancel-button {
+  /* background-color: rgba(80, 80, 80); */
+  color: $cancel-button-color;
+  /* margin-right: 20; */
+  /* width: 45%; */
+}
+
+.buttons-layout-success-margin{
+    /* margin-top: 3% !important; */
+}
+
+#save-button {
+  /* color: black; */
+  color: $save-button-color;
+  margin-left: 8%;
+  margin-right: 3%;
+  /* width: 45%; */
+}
+
+#save-bet-header-stack-layout {
+  width: 100%;
+}
+
+#buttons-grid{
+    padding-right: 20%;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+
+#activity-indicator{
+    width: 100%;
+    height: 100%;
+    /* margin-top: 3%; */
+    color: $activity-indicator-color;
+    margin: 0%;
+    padding: 0%;
+}
+
+#activity-layout{
+    height: 5%;
+    width: 10%;
+    vertical-align: top;
+}
+
+#success-message-layout {
+  color: $success-message-layout-color;
+  margin-left: 3%;
+}
+
+.success-message{
+    font-size: 17em;
+}
+
+.check-icon {
+  font-size: 19em;
+  margin-right: 3%;
+  margin-top: 0.3%;
+}
+
+.save-bet-error-message {
+  color: $save-bet-error-message-color;
+  font-size: 16em;
+  margin-left: 5%;
+  margin-top: 0.5%;
+}
+
+.input-error {
+  border-color: $save-bet-error-message-color !important;
+}
+
+#save-bet-header-label {
+  color: $save-bet-header-label-color;
+  font-size: 21em;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  margin-left: 3%;
+}

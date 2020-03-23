@@ -1,0 +1,109 @@
+<ActionBar title="Bethelper">
+    <ActionItem ios.position="right" android.position="actionBar">
+        <StackLayout orientation="horizontal">
+            <StackLayout horizontalAlignment="center">
+                <Label text="&#xf0c7;" class="action-item-label action-item-save fas" (touch)="onActionbarIconTouch($event)" (tap)="saveIconTap()"></Label>
+            </StackLayout>
+            <StackLayout horizontalAlignment="center">
+                <Label text="&#xf2bd;" class="action-item-label action-item-profile fas" (touch)="onActionbarIconTouch($event)"
+                [nsRouterLink]="['/saved-bets']"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ActionItem>
+</ActionBar>
+
+<DockLayout>
+
+    <!-- Footer -->
+    <StackLayout id="winnings-sticky-footer" orientation="vertical" dock="bottom">
+        <Label text="{{ 'mainscreen_winnings_title' | L }}" id="winnings-title" horizontalAlignment="center"
+            visibility="{{ betService.tips.length > 0 ? 'visible' : 'collapsed' }}"></Label>
+        <WrapLayout>
+            <Stacklayout *ngFor="let combinationBet of this.betService.combinationBets" orientation="horizontal"
+                class="combination-bet-layout" id="winnings-layout">
+                <StackLayout orientation="horizontal">
+                    <StackLayout class="winnings-label-container" orientation="horizontal">
+                        <Label [text]="combinationBet.name"></Label>
+                        <Label text=":"></Label>
+                    </StackLayout>
+                    <Label [text]="this.getWinnings(combinationBet)" class="winnings-result"></Label>
+                </StackLayout>
+            </Stacklayout>
+        </WrapLayout>
+    </StackLayout>
+
+    <!-- Tips -->
+    <StackLayout dock="top">
+        <StackLayout col="1" row="0" orientation="horizontal" id="stake-layout" horizontalAlignment="center">
+            <Label text="{{ 'mainscreen_stake_label' | L }}" class="stake-label" horizontalAlignment="left"></Label>
+            <Label text="&#xf51e;" class="fas coins-icon" horizontalAlignment="right"></Label>
+            <TextField class="stake-input" inputType="decimal" keyboardType="number" textAlignment="center"
+                [(ngModel)]="this.betService.stake" (returnPress)="this.betService.calculateWinnings()"></TextField>
+        </StackLayout>
+        <ScrollView #tipsScrollView height="100%">
+            <StackLayout id="tips-stack-layout">
+                <GridLayout id="tips-grid" rows="auto,auto">
+                    <RadListView [items]="this.betService.tips" row="0"
+                        [ngClass]="[!this.betService.tips || this.betService.tips.length <= 0? 'h-0':'mt-5']" >
+                        <ng-template let-tip="item" let-i="index" id="tip-template">
+                            <StackLayout orientation="horizontal">
+                                <GridLayout class="tip-grid-layout {{getMarkedAsWin(tip)? 'win-marker': 'loss-marker'}}"
+                                    columns="15*,5*" rows="*,*,*,*,*">
+                                    <WrapLayout row="0" col="0" orientation="horizontal" horizontalAlignment="left"
+                                        class="mp-0 tip-header ml-2">
+                                        <Label [text]="getOpponent1(tip)" class="mp-0"></Label>
+                                        <Label text="-" class="opponent-splitter {{opponentsEmpty(tip)? 'opponents-empty-splitter':''}}" ></Label>
+                                        <Label [text]="getOpponent2(tip)" class="mp-0"></Label>
+                                    </WrapLayout>
+                                    <StackLayout orientation="horizontal" row="0" col="1"
+                                        class="fas tip-configuration-stack-layout" horizontalAlignment="right"
+                                        verticalAlignment="top">
+                                        <Label text="&#xf013;" class="configure-icon" horizontalAlignment="right"
+                                            (touch)="onConfigureTipTouch($event)" (tap)="onConfigureTipTap(tip)"
+                                            [nsRouterLink]="['/add-tip']"></Label>
+                                        <Label text="&#xf1f8;" class="bin-icon" horizontalAlignment="right"
+                                            (touch)="onDeleteTipTouch($event)"
+                                            (tap)="removeTip(tip)"></Label>
+                                    </StackLayout>
+                                    <StackLayout row="1" col="0" orientation="horizontal" horizontalAlignment="left"
+                                        class="mp-0 tip-odds ml-3">
+                                        <Label text="{{ 'mainscreen_odds_label' | L }}" class="mp-0 tip-label"></Label>
+                                        <Label class="mp-0 tip-detail" [text]="getOdds(tip)"></Label>
+                                    </StackLayout>
+                                    <StackLayout row="2" col="0" colSpan="2" orientation="horizontal"
+                                        horizontalAlignment="left" class="mp-0 tip-outcome ml-3">
+                                        <Label text="{{ 'mainscreen_outcome_label' | L }}" class="mp-0  tip-label"
+                                            verticalAlignment="top"></Label>
+                                        <Label [text]="getOutcome(tip)" class="mp-0 tip-detail" textWrap="true"></Label>
+                                    </StackLayout>
+                                    <StackLayout orientation="horizontal" row="3" col="0" class="mp-0 tip-meta" >
+                                        <Label [text]="getSport(tip)" class="mp-0 tip-sports"></Label>
+                                        <Label text="|" class="tip-date-splitter"></Label>
+                                        <Label [text]="getDate(tip)" class="mp-0 tip-date"></Label>
+                                    </StackLayout>
+                                    <Switch row="3" col="1" colSpan="2" [checked]="getMarkedAsWin(tip)" color="rgb(0, 170, 120)"
+                                    className="win-loss-switch" margin="0" padding="0" verticalAlignment="bottom"
+                                    (checkedChange)="winLossSwitchChange($event, tip)"horizontalAlignment="right" (loaded)="switchReady = true">
+                                </Switch>
+                                </GridLayout>
+                            </StackLayout>
+                        </ng-template>
+                    </RadListView>
+
+                    <!-- Button -->
+                    <StackLayout class="add-button-wrapper" row="1">
+                        <StackLayout class="add-button-shadow" (loaded)="onLoaded($event)">
+                            <StackLayout  class="add-button" (touch)="onButtonTouch($event)" (tap)="onAddButtonTap()"
+                                [nsRouterLink]="['/add-tip']">
+                                <Label #addButton class="add-button-text" text="+"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                </GridLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</DockLayout>

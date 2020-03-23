@@ -1,0 +1,11 @@
+<StackLayout id="bethelper-datepicker-layout">
+    <DatePicker id="bethelper-datepicker" (dateChange)="onDateChanged($event)" >
+    </DatePicker>
+    <StackLayout>
+        <StackLayout orientation="horizontal" id="bethelper-datepicker-buttons-layout" horizontalAlignment="right">
+            <Label id="cancel-date-picker-button" text="{{ 'datepicker_cancel' | L }}" (tap)="close()" ></Label>
+            <Label id="apply-date-button" text="{{ 'datepicker_ok' | L }}" (tap)="setDate()"></Label>
+        </StackLayout>
+    </StackLayout>
+
+</StackLayout>

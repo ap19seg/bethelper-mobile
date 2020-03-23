@@ -1,0 +1,67 @@
+<Page>
+
+<ActionBar title="{{ 'add_tip_title' | L }}">
+</ActionBar>
+
+<StackLayout orientation="vertical" id="add-tip-layout">
+
+    <StackLayout orientation="horizontal" class="detail-layout-margin" >
+        <Label text="{{ 'add_tip_opponents_label' | L }}" class="tip-detail-label"></Label>
+        <Label text="&#xf007;" class="tip-detail-icon fas"></Label>
+    </StackLayout>
+    <TextField  class="tip-input-field first-tip-input-field {{ showError? 'input-error':''}}" inputType="text" (textChange)="onOpponentInputTextChange()" [(ngModel)]="tipService.tip.opponent1" visibility="{{ fightersLoaderService.loadingError || fightersLoaderService.fighters.length <= 0? 'visible' : 'collapsed' }}"></TextField>
+    <RadAutoCompleteTextView #opponent1Autocomplete completionMode="Contains"
+        class="fighter-names-autocomplete {{ showError? 'input-error':''}}"
+        [items]="_fighterNameTokens" displayMode="Tokens" displayMode="Plain" (loaded)="onOpponentLoaded($event,opponent1)"
+        (textChanged)="onOpponentAutocompleteTextChanged($event, opponent1)"
+        visibility="{{ !fightersLoaderService.loadingError && fightersLoaderService.fighters.length > 0? 'visible' : 'collapsed' }}">
+    </RadAutoCompleteTextView>
+
+    <StackLayout id="vs-layout" orientation="horizontal" >
+        <Label id="vs-label" text="vs"></Label>
+    </StackLayout>
+    <TextField  class="tip-input-field second-tip-input-field {{ showError? 'input-error':''}}" inputType="text" (textChange)="onOpponentInputTextChange()" [(ngModel)]="tipService.tip.opponent2" visibility="{{ fightersLoaderService.loadingError || fightersLoaderService.fighters.length <= 0? 'visible' : 'collapsed' }}"></TextField>
+    <RadAutoCompleteTextView #opponent2Autocomplete completionMode="Contains"
+        class="fighter-names-autocomplete {{ showError? 'input-error':''}}"
+        [items]="_fighterNameTokens" displayMode="Tokens" displayMode="Plain" (loaded)="onOpponentLoaded($event,opponent2)"
+        (textChanged)="onOpponentAutocompleteTextChanged($event, opponent2)"
+        visibility="{{ !fightersLoaderService.loadingError && fightersLoaderService.fighters.length > 0? 'visible' : 'collapsed' }}">
+    </RadAutoCompleteTextView>
+
+    <StackLayout orientation="horizontal" class="tip-detail-layout detail-layout-margin">
+        <Label text="{{ 'add_tip_odds_label' | L }}" class="tip-detail-label"></Label>
+        <Label text="&#xf1ec;" class="tip-detail-icon fas"></Label>
+    </StackLayout>
+    <TextField #oddsInput class="tip-input-field odds-input-field" hint="Insert Odds" inputType="decimal" keyboardType="number"
+        verticalAlignment="top" textAlignment="left" [(ngModel)]="tipService.tip.odds"
+        (textChange)="onOddsInputTextChange()" returnKeyType="done"></TextField>
+
+    <StackLayout orientation="horizontal" class="tip-detail-with-dialog">
+        <Label text="{{ 'add_tip_outcome_label' | L }}" class="tip-detail-label"></Label>
+        <Label text="&#xf091;" class="tip-detail-icon fas"></Label>
+    </StackLayout>
+    <Button class="dialog-button" [text]="tipService.tip.outcome" (tap)="onOutcomeButtonTap()"></Button>
+    <Label text="{{ 'add_tip_opponent_input_error_label' | L }}" textWrap="true"
+        visibility="{{ showError ? 'visible' : 'collapsed' }}" class="opponent-input-error"></Label>
+
+    <StackLayout orientation="horizontal" class="tip-detail-with-dialog date-layout">
+        <Label text="{{ 'add_tip_date_label' | L }}" class="tip-detail-label"></Label>
+        <Label text="&#xf073;" class="tip-detail-icon fas"></Label>
+    </StackLayout>
+    <Button class="dialog-button" [text]="tipService.tip.date" (tap)="onDateButtonTap()"></Button>
+
+    <StackLayout orientation="horizontal" id="button-layout">
+        <StackLayout class="button-stack-layout">
+            <Button id="cancel-button" text="{{ 'add_tip_cancel_label' | L }}" (tap)="cancelTipConfigurationTap()"
+                [nsRouterLink]="['/mainscreen']"></Button>
+        </StackLayout>
+        <StackLayout class="button-stack-layout">
+            <Button id="add-tip-button" text="{{ 'add_tip_add_tip_label' | L }}" (tap)="addTipTap(tipService.tip)"
+                [nsRouterLink]="['/mainscreen']"></Button>
+        </StackLayout>
+    </StackLayout>
+
+
+</StackLayout>
+
+</Page>

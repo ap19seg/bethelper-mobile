@@ -1,0 +1,8 @@
+<StackLayout id="load-bet-dialog-wrapper">
+    <Label id="load-bet-header-label" text="{{ 'load_bet_title_label' | L }}"></Label>
+    <Label id="load-bet-text-label" text="{{ 'load_bet_text_label' | L }}" textWrap="true" ></Label>
+    <StackLayout id="load-bet-buttons-layout" orientation="horizontal">
+        <Button id="load-bet-no-button" text="{{ 'load_bet_no_label' | L }}" (tap)="loadBetNoButtonTap()"></Button>
+        <Button id="load-bet-yes-button" text="{{ 'load_bet_yes_label' | L }}" (tap)="loadBetYesButtonTap()"></Button>
+    </StackLayout>
+</StackLayout>
