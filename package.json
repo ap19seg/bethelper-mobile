@@ -36,7 +36,7 @@
     "nativescript-ui-autocomplete": "^6.0.1",
     "nativescript-ui-dataform": "^6.0.0",
     "nativescript-ui-listview": "^8.0.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "~0.1.12",
     "request-promise": "^4.2.5",
